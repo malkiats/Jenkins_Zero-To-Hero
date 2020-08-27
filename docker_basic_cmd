@@ -1,0 +1,90 @@
+Run - start a container
+# docker run nginx
+
+ps - list containers
+# docker ps
+# docker ps -a
+
+STOP - stop a container
+# docker ps
+# docker stop silly_sammet
+
+Rm - remove a container
+# docker rm silly_sammet
+# docker ps -a
+
+images - List images
+# docker images
+
+rmi - Remove images
+# docker rmi nginx
+
+Pull - download an image
+# docker run nginx
+# docker pull nginx
+# docker run ubuntu sleep 5
+
+Exec - execute a command
+# docker ps -a
+# docker exec distracted_mcclintock cat /etc/hosts
+
+Run - attach and detach
+# docker run kodekloud/simple-webapp
+# docker run -d kodekloud/simple-webapp
+# docker attach a043d 
+==============================================
+
+Copy file inside Container
+# docker cp script.sh shub_jenkins_1:/tmp/script.sh
+
+Run container
+# docker run centos
+ 
+Log into the centOS image - use hub.docker.com for check images
+# docker run -it centos bash
+ 
+Run in background for 20 Sec as sleep mode
+# docker run -d centos sleep 20
+ 
+Container that exist
+# docker ps -a
+ 
+Stop container
+# docker run -d centos sleep 2000
+ 
+[root@dns ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bc8b4b78beb0        centos              "sleep 2000"        10 seconds ago      Up 10 seconds                           cocky_brahmagupta
+ 
+Name of the container: cocky_brahmagupta
+ 
+Force Kill
+# docker stop cocky_brahmagupta
+ 
+Removing the container ID
+# docker rm e32aec51f29b
+ 
+Remove multiple container same time (Add first three letters)
+# docker rm ccd 045 952 54f
+ 
+Check image
+# docker images
+ 
+Rm image 
+# docker rmi centos
+ 
+Pull image (Not to run)
+# docker pull ubuntu
+# docker image
+ 
+Execute command in container without login in
+# docker run -d ubuntu sleep 1000
+# docker exec containerID cat /etc/*release*
+
+run - PORT mapping
+# docker run -p 3306:3306 mysql
+
+https://hub.docker.com/explore
+ 
+Official Images
+https://hub.docker.com/search?image_filter=official&type=image
