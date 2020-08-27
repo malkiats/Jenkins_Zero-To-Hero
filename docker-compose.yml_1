@@ -1,0 +1,17 @@
+# This docker-compose file intent to create a Jenkins image container
+# that runs a Jenkins container 
+# Advice about this approach can be found at:
+
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - /jenkins-data/jenkins_home:/var/jenkins_home
+    networks:
+      - net
+networks:
+  net:
